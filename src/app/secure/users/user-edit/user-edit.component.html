@@ -1,0 +1,46 @@
+<main class="form-signin w-100 m-auto" (submit)="submit()">
+    <form [formGroup]="form">
+        <h1 class="h3 mb-3 fw-normal">Please Edit</h1>
+
+        <div class="form-floating mt-2">
+            <input formControlName="first_name" class="form-control" name="first_name" id="first_name"
+                placeholder="firstname" required />
+            <label for="first_name">Firstname</label>
+        </div>
+        <div class="form-floating mt-2">
+            <input formControlName="last_name" class="form-control" id="last_name" name="last_name"
+                placeholder="lastname" required />
+            <label for="last_name">LastName</label>
+        </div>
+
+        <div class="form-floating mt-2">
+            <input formControlName="email" type="email" class="form-control" id="emailInput" name="emailInput"
+                placeholder="name@example.com" required />
+            <label for="emailInput">Email address</label>
+        </div>
+
+        <div class="mt-2">
+            <label for="role_id">Role</label>
+            <select name="role_id" id="role_id" class="form-control" formControlName="role_id">
+                <option>Selected</option>
+                <option *ngFor="let role of roles" [ngValue]="role.id">
+                    {{role.name}}
+                </option>
+            </select>
+        </div>
+
+        <!-- <div class="form-floating mt-2">
+            <input formControlName="password" type="password" class="form-control" id="passwordInput" name="passwordInput"
+                placeholder="password" required />
+            <label for="passwordInput">Password</label>
+        </div>
+
+        <div class="form-floating">
+            <input formControlName="password_confirm" type="password" class="form-control" id="password_confirm_input"
+                name="password_confirm_input" placeholder="Password" required />
+            <label for="password_confirm_input">Password Confirm</label>
+        </div> -->
+
+        <button class="w-100 btn btn-lg btn-primary mt-5" type="submit">Submit</button>
+    </form>
+</main>

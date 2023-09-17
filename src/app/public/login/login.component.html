@@ -1,0 +1,19 @@
+<main class="form-signin w-100 m-auto">
+    <form [formGroup]="form" (submit)="submit()">
+        <h1 class="h3 mb-3 fw-normal">Please sing in</h1>
+
+        <div class="form-floating mt-2">
+            <input formControlName="email" type="email" class="form-control" id="emailInput" name="emailInput"
+                placeholder="name@example.com" required />
+            <label for="emailInput">Email address</label>
+        </div>
+
+        <div class="form-floating mt-2">
+            <input formControlName="password" type="password" class="form-control" id="passwordInput"
+                name="passwordInput" placeholder="password" required />
+            <label for="passwordInput">Password</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary mt-5" type="submit">Submit</button>
+    </form>
+</main>
